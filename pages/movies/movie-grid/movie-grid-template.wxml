@@ -1,0 +1,11 @@
+<import src="../movie/movie-template.wxml" />
+<template name="movieGridTemplate">
+  <view  class='grid-container'>
+    <block wx:for="{{movies}}" wx:for-item="movie">
+    <view class='single-view-container'>
+      <template is="movieTemplate" data="{{...movie}}"/><!--在template中加样式无效，因此在外层加一个view实现样式-->
+    </view>  
+  </block>
+  </view>
+  
+</template>
